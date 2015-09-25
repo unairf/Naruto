@@ -24,11 +24,13 @@ Partial Class frmPrincipal
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ComprobarVersiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AñadirCapítuloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarCapítuloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ActualizarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ChatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentanasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.grpCapitulos = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -59,40 +61,52 @@ Partial Class frmPrincipal
         '
         'ArchivoToolStripMenuItem
         '
-        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirCapítuloToolStripMenuItem, Me.ModificarCapítuloToolStripMenuItem, Me.ActualizarToolStripMenuItem, Me.SalirToolStripMenuItem, Me.ChatToolStripMenuItem})
+        Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ComprobarVersiónToolStripMenuItem, Me.AñadirCapítuloToolStripMenuItem, Me.ModificarCapítuloToolStripMenuItem, Me.AjustesToolStripMenuItem, Me.ChatToolStripMenuItem, Me.ActualizarToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
         Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 19)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
         '
+        'ComprobarVersiónToolStripMenuItem
+        '
+        Me.ComprobarVersiónToolStripMenuItem.Name = "ComprobarVersiónToolStripMenuItem"
+        Me.ComprobarVersiónToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.ComprobarVersiónToolStripMenuItem.Text = "Comprobar versión"
+        '
         'AñadirCapítuloToolStripMenuItem
         '
         Me.AñadirCapítuloToolStripMenuItem.Name = "AñadirCapítuloToolStripMenuItem"
-        Me.AñadirCapítuloToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.AñadirCapítuloToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.AñadirCapítuloToolStripMenuItem.Text = "Añadir capítulo"
         '
         'ModificarCapítuloToolStripMenuItem
         '
         Me.ModificarCapítuloToolStripMenuItem.Name = "ModificarCapítuloToolStripMenuItem"
-        Me.ModificarCapítuloToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ModificarCapítuloToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.ModificarCapítuloToolStripMenuItem.Text = "Modificar capítulo"
+        '
+        'AjustesToolStripMenuItem
+        '
+        Me.AjustesToolStripMenuItem.Name = "AjustesToolStripMenuItem"
+        Me.AjustesToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.AjustesToolStripMenuItem.Text = "Ajustes"
+        '
+        'ChatToolStripMenuItem
+        '
+        Me.ChatToolStripMenuItem.Name = "ChatToolStripMenuItem"
+        Me.ChatToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.ChatToolStripMenuItem.Text = "Chat"
         '
         'ActualizarToolStripMenuItem
         '
         Me.ActualizarToolStripMenuItem.Name = "ActualizarToolStripMenuItem"
-        Me.ActualizarToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ActualizarToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.ActualizarToolStripMenuItem.Text = "Actualizar"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
-        '
-        'ChatToolStripMenuItem
-        '
-        Me.ChatToolStripMenuItem.Name = "ChatToolStripMenuItem"
-        Me.ChatToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
-        Me.ChatToolStripMenuItem.Text = "Chat"
         '
         'VentanasToolStripMenuItem
         '
@@ -283,4 +297,6 @@ Partial Class frmPrincipal
     Friend WithEvents ChatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents lblShippuden As System.Windows.Forms.Label
     Friend WithEvents lblNaruto As System.Windows.Forms.Label
+    Friend WithEvents ComprobarVersiónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AjustesToolStripMenuItem As ToolStripMenuItem
 End Class

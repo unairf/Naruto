@@ -449,10 +449,46 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    Private Sub ComprobarVersiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprobarVersiónToolStripMenuItem.Click
 
+        Dim sourceString As String = New System.Net.WebClient().DownloadString("https://unairf.wordpress.com/2015/09/19/ejemplo-de-entrada/")
+        If sourceString.Contains("Actualversion") Then MsgBox("Leo el documento!")
+
+        'Try
+        '    Dim enlace As String = "https://docs.google.com/document/d/1myWt0-HrP32HXIkzAGGnpxfqf-LQn9gQAuXy6PtkZCM/edit"
+        '    Dim NAVEGADOR As New WebBrowser
+        '    NAVEGADOR.ScriptErrorsSuppressed = True
+        '    NAVEGADOR.Navigate("https://docs.google.com/document/d/1myWt0-HrP32HXIkzAGGnpxfqf-LQn9gQAuXy6PtkZCM/edit")
+        '    ESPERA(3000) 'DA TIEMPO A QUE EL NAVEGADOR LEA EL HTML
+        '    If NAVEGADOR.Document.ToString.Contains("Actualversion") Then MsgBox("Hay una nueva versión disponible")
+        '    'For Each ETIQUETA As HtmlElement In NAVEGADOR.Document.All
+
+        '    '    If ETIQUETA.ToString.Contains("Actualversion") Then
+        '    '        'If ETIQUETA.GetAttribute("CLASSNAME") = "drive-viewer-text-page" Then
+        '    '        MsgBox(ETIQUETA.InnerText)
+        '    '            Exit For
+        '    '        'End If
+        '    '    End If
+        '    'Next
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+        'End Try
+    End Sub
 
     Private Sub ChatToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChatToolStripMenuItem.Click
         Cliente.Show()
     End Sub
 
+    Private Sub AjustesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AjustesToolStripMenuItem.Click
+        frmAjustes.Show()
+    End Sub
+
+    Private Sub ESPERA(ByVal INTERVALO As Integer)
+        Dim PARADA As New Stopwatch
+        PARADA.Start()
+        Do While PARADA.ElapsedMilliseconds < INTERVALO
+            Application.DoEvents()
+        Loop
+        PARADA.Stop()
+    End Sub
 End Class
